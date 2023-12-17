@@ -15,7 +15,13 @@
 </head>
 <body>
     <div class="container">
+        <h1 class="title">Article classification !</h1>
+        <div style="width:100%;">
+            <h2 class="input-title">Input your article:</h2>
+        </div>
+        
         <div class="input-group">
+        
             <form class="input-text" id="post-form">
                 {% csrf_token %}
                 <input type="text" name="input" id="input">
@@ -24,8 +30,19 @@
                 </button>
             </form>
         </div>
-        <div class="body">
-            <canvas id="myChart" style="width:100%;max-height: 210px;"></canvas>
+
+        <div style="width:100%;margin-top: 10px;">
+            <h2 class="input-title">Result classification:</h2>
+        </div>
+        <div class="main-container">
+            
+            <div class="result">
+                <h4 class="name_catagory"></h4>
+            </div>
+            <div class="chart">
+                <canvas id="myChart" style="width:100%;"></canvas>
+            </div>
+            
         </div>
 
         <div class="footer">

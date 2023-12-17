@@ -14,6 +14,13 @@ $(document).ready(function () {
                 const body = document.querySelector('.body')
                 var xValues = ["Computer Science", "Physics", "Mathematics", "Statistics", "Quantitative Biology","Quantitative Finance"];
                 var yValues = response.answer
+                var name_catagory_h4=document.querySelector('.name_catagory')
+                var name_string="Catagory: "
+                response.name_catagory.forEach(function(element) {
+                    name_string+=element+", "
+                  });
+                
+                name_catagory_h4.innerHTML=name_string
                 var barColors = ["red", "green","blue","orange","brown"];
 
                 new Chart("myChart", {
